@@ -35,6 +35,7 @@ func NewConfig(raws ...interface{}) (*Config, []string, error) {
 	if len(c.RunCommand) == 0 {
 		c.RunCommand = []string{
 			"run",
+			"--rm",
 			"-d", "-i", "-t",
 			"-v", "{{.Volumes}}",
 			"{{.Image}}",
