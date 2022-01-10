@@ -11,9 +11,10 @@ build {
   name        = var.name
   description = local.description
 
-  sources = [
-    "source.virtualbox-iso.ubuntu-1204"
-  ]
+  source "source.virtualbox-iso.ubuntu-1204" {
+    vm_name = var.name
+  }
+
 }
 
 source "virtualbox-iso" "ubuntu-1204" {
